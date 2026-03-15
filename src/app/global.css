@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif !important;
+}
+
+/* Theme-aware styles for react-mui-sidebar menu items */
+/* Target all text elements in the sidebar drawer when in dark mode */
+.MuiDrawer-paper[class*="dark"],
+[data-mui-color-scheme="dark"] .MuiDrawer-paper,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper a,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper span,
+[data-mui-color-scheme="dark"]
+  .MuiDrawer-paper
+  div:not([class*="hover"]):not(:hover) {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="subheading"],
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="Subheader"],
+[data-mui-color-scheme="dark"] .MuiDrawer-paper p {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Ensure menu items are visible in dark mode */
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="MenuItem"] a,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="MenuItem"] span {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Make icons white when menu item is selected/active in dark mode */
+[data-mui-color-scheme="dark"]
+  .MuiDrawer-paper
+  [class*="MenuItem"][class*="selected"]
+  svg,
+[data-mui-color-scheme="dark"]
+  .MuiDrawer-paper
+  [class*="MenuItem"][class*="active"]
+  svg,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="selected"] svg,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper [class*="active"] svg,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper a[aria-current="page"] svg,
+[data-mui-color-scheme="dark"] .MuiDrawer-paper a.active svg {
+  color: #ffffff !important;
+}
